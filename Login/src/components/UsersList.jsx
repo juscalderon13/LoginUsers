@@ -1,13 +1,25 @@
+import { UserRow } from "./UserRow"
+
 //Maquetacion html de la lista de usuarios
-export const UsersList = () => {
-    return (
-        <div className="hola">
-            <p>Tabla futura</p>
-                    <table>
-
-                    </table>
-
-        </div>
-       
-    );
-} 
+export const UsersList = ({users = []}) => {
+  return (
+  <table className = "table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>username</th>
+            <th>email</th>
+            <th>update</th>
+            <th>remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {
+            users.map( ({id, username, email}) => (
+                <UserRow key={id} id={id} username={username} email={email}/>
+            ))
+        }
+    </tbody>
+  </table>
+  )
+}
