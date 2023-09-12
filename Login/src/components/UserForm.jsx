@@ -7,7 +7,7 @@ const initialUserForm = {
 }
 
 //Maquetacion html del registro de usuarios
-export const UserForm = () => {
+export const UserForm = ( {handlerAddUser}) => {
 
     const [UserForm, setUserForm] = useState(initialUserForm);
 
@@ -30,10 +30,11 @@ export const UserForm = () => {
             alert("Debe completar los datos del formulario!");
             return;
         }
-        console.log(UserForm);
+        //console.log(UserForm);
 
         //guardar el userForm en el listado de usuarios
-        setUserForm(initialUserForm)
+        handlerAddUser(UserForm);
+        setUserForm(initialUserForm);
     }
 
     return(
