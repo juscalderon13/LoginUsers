@@ -1,6 +1,6 @@
 import { UserRow } from "./UserRow"
 
-//Maquetacion html de la lista de usuarios
+//Maquetacion html de la lista de usuarios obtiene los valores de la lista creada en AppUsers.jsx
 export const UsersList = ({users = []}) => {
   return (
   <table className = "table table-hover table-striped">

@@ -1,4 +1,4 @@
-//componente de la estructuracion de la fila
+//componente de la estructuracion de la fila solicita los parametros (id, username, email)
 export const UserRow = ({id, username, email}) =>{
     return(
         <tr>
