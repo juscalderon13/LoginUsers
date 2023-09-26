@@ -1,13 +1,7 @@
 import { useState } from "react"
 
-const initialUserForm = {
-    username: "",
-    password: "",
-    email: "",
-}
-
 //Maquetacion html del registro de usuarios
-export const UserForm = ( {handlerAddUser}) => {
+export const UserForm = ( {handlerAddUser, initialUserForm}) => {
 
     const [UserForm, setUserForm] = useState(initialUserForm);
 
